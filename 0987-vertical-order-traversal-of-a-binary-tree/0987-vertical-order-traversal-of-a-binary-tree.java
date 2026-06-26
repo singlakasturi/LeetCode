@@ -15,19 +15,18 @@
  */
 class Solution {
     public List<List<Integer>> verticalTraversal(TreeNode root) {
-
         List<List<Integer>> ans = new ArrayList<>();
-
+        
         if(root == null)
             return ans;
 
-        TreeMap<Integer, TreeMap<Integer, List<Integer>>> mappy = new TreeMap<>();
+        Map<Integer, Map<Integer, List<Integer>>> mappy = new TreeMap<>();
         Queue<Pair<TreeNode, Pair<Integer, Integer>>> q = new LinkedList<>();
 
         q.offer(new Pair(root, new Pair(0, 0)));
 
         while(!q.isEmpty()) {
-            Pair<TreeNode, Pair<Integer, Integer>> p =q.poll();
+            Pair<TreeNode, Pair<Integer, Integer>> p = q.poll();
 
             TreeNode node = p.getKey();
             int x = p.getValue().getKey();
@@ -43,11 +42,12 @@ class Solution {
                 q.offer(new Pair(node.right, new Pair(x+1, y+1)));
         }
 
-        for(Map.Entry<Integer, TreeMap<Integer, List<Integer>>> entry : mappy.entrySet()) {
+        for(Map.Entry<Integer, Map<Integer, List<Integer>>> entry : mappy.entrySet()) {
             List<Integer> col = new ArrayList<>();
 
             for(List<Integer> l : entry.getValue().values()) {
                 Collections.sort(l);
+
                 col.addAll(l);
             }
 
