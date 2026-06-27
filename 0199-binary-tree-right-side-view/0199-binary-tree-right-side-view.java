@@ -14,31 +14,22 @@
  * }
  */
 class Solution {
-    public List<Integer> rightSideView(TreeNode root) {
-        List<Integer> ans = new ArrayList<>();
 
+    List<Integer> ans = new ArrayList<>();
+
+    public void solve(TreeNode root, int l) {
         if(root == null)
-            return ans;
+            return ;
 
-        Queue<TreeNode> q = new LinkedList<>();
-        q.offer(root);
+        if(ans.size() == l)
+            ans.add(root.val);
 
-        while(!q.isEmpty()) {
-            int size = q.size();
+        solve(root.right, l+1);
+        solve(root.left, l +1);
+    }
 
-            for(int i=0;i<size;i++) {
-                TreeNode node = q.poll();
-
-                if(i == size-1)
-                    ans.add(node.val);
-                
-                if(node.left != null)
-                    q.offer(node.left);
-                
-                if(node.right != null)
-                    q.offer(node.right);
-            }
-        }
+    public List<Integer> rightSideView(TreeNode root) {
+        solve(root, 0);
 
         return ans;
     }
