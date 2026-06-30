@@ -63,4 +63,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0257-binary-tree-paths](https://github.com/singlakasturi/LeetCode/tree/master/0257-binary-tree-paths) |
+## Array
+|  |
+| ------- |
+| [0875-koko-eating-bananas](https://github.com/singlakasturi/LeetCode/tree/master/0875-koko-eating-bananas) |
+## Binary Search
+|  |
+| ------- |
+| [0875-koko-eating-bananas](https://github.com/singlakasturi/LeetCode/tree/master/0875-koko-eating-bananas) |
 <!---LeetCode Topics End-->
