@@ -15,28 +15,27 @@
  */
 class Solution {
 
-    public TreeNode right(TreeNode left) {
-        while(left.right != null) {
-            left = left.right;
-        }
+    public TreeNode left(TreeNode left) {
+        while(left.left != null)
+            left = left.left;
 
         return left;
     }
 
-    public TreeNode solve(TreeNode root) {
-        if(root.left == null)
-            return root.right;
-        if(root.right == null)
-            return root.left;
+    public TreeNode solve(TreeNode node) {
+        if(node.left == null)
+            return node.right;
+        if(node.right == null)
+            return node.left;
 
-        TreeNode curr = root;
+        TreeNode curr = node;
 
-        TreeNode right = root.right;
-        TreeNode rightMost = right(root.left);
+        TreeNode left = node.left;
+        TreeNode leftMost = left(node.right);
 
-        rightMost.right = right;
+        leftMost.left = left;
 
-        return curr.left;
+        return node.right;
     }
 
     public TreeNode deleteNode(TreeNode root, int key) {
