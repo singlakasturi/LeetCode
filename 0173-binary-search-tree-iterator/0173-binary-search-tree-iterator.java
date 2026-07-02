@@ -15,30 +15,31 @@
  */
 class BSTIterator {
 
-    List<Integer> list = new ArrayList<>();
-    int i = 0;
-    TreeNode node;
+    Deque<TreeNode> dq = new ArrayDeque<>();
 
     public BSTIterator(TreeNode root) {
-        node = root;
-        fill(root);
+        storeLeftMost(root);
     }
 
-    private void fill(TreeNode root) {
-        if(root == null)
-            return ;
-
-        fill(root.left);
-        list.add(root.val);
-        fill(root.right);
+    private void storeLeftMost(TreeNode root) {
+        while(root != null) {
+            dq.addFirst(root);
+            root = root.left;
+        }
     }
     
     public int next() {
-        return list.get(i++);
+        TreeNode node = dq.removeFirst();
+
+        if(node.right != null) {
+            storeLeftMost(node.right);
+        }
+
+        return node.val;
     }
     
     public boolean hasNext() {
-        return i != list.size();
+        return !dq.isEmpty();
     }
 }
 
