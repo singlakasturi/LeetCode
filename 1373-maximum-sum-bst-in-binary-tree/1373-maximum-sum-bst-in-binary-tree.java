@@ -13,30 +13,43 @@
  *     }
  * }
  */
+
+class Node {
+    boolean BST;
+    int min, max, sum;
+
+    public Node(boolean BST, int min, int max, int sum) {
+        this.min = min;
+        this.max = max;
+        this.sum = sum;
+        this.BST = BST;
+    }
+}
+
 class Solution {
 
     int ans = 0;
 
-    public int[] solve(TreeNode root) {
-        if(root == null) {
-            return new int[]{1, Integer.MAX_VALUE, Integer.MIN_VALUE, 0};
-        }
+    public Node solve(TreeNode root) {
+        if(root == null)
+            return new Node(true, Integer.MAX_VALUE, Integer.MIN_VALUE, 0);
 
-        int[] left = solve(root.left);
-        int[] right = solve(root.right);
+        Node left = solve(root.left);
+        Node right = solve(root.right);
+ 
+        if(left.BST && right.BST && root.val > left.max && root.val < right.min) {
+            int currSum = root.val + left.sum + right.sum;
 
-        if(left[0] == 1 && right[0] == 1 && root.val > left[2] && root.val < right[1]) {
-            int currSum = left[3] + right[3] + root.val;
             ans = Math.max(ans, currSum);
 
-            int min = Math.min(root.val, left[1]);
-            int max = Math.max(root.val, right[2]);
+            int min = Math.min(left.min, root.val);
+            int max = Math.max(right.max, root.val);
 
-            return new int[]{1, min, max, currSum};
-        } 
+            return new Node(true, min, max, currSum);
+        }
 
-        return new int[]{0, Integer.MAX_VALUE, Integer.MIN_VALUE, 0};
-    }
+        return new Node(false, Integer.MAX_VALUE, Integer.MIN_VALUE, 0);
+    } 
 
     public int maxSumBST(TreeNode root) {
         solve(root);
