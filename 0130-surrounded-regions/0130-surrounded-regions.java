@@ -1,25 +1,15 @@
 class Solution {
 
-    public void bfs(char[][] board, int i, int j, boolean[][] vis, int n, int m) {
-        Queue<int[]> q = new LinkedList<>();
-        q.offer(new int[]{i, j});
+    int[][] dir = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+
+    public void dfs(char[][] board, int i, int j, boolean[][] vis, int n, int m) {
+        if(i < 0 || i >= n || j < 0 || j >= m || vis[i][j] || board[i][j] != 'O')
+            return ;
+
         vis[i][j] = true;
-        int[][] dir = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
 
-        while(!q.isEmpty()) {
-            int[] node = q.poll();
-
-            for(int k=0;k<4;k++) {
-                int newR = node[0] + dir[k][0];
-                int newC = node[1] + dir[k][1];
-
-                if(newR < 0 || newR >= n || newC < 0 || newC >= m || vis[newR][newC] || board[newR][newC] != 'O')
-                    continue;
-
-                q.offer(new int[]{newR, newC});
-                vis[newR][newC] = true;
-            }
-        }
+        for(int k=0;k<4;k++)
+            dfs(board, i + dir[k][0], j + dir[k][1], vis, n, m);
     }
 
     public void solve(char[][] board) {
@@ -30,16 +20,16 @@ class Solution {
 
         for(int i=0;i<n;i++) {
             if(board[i][0] == 'O' && !vis[i][0])
-                bfs(board, i, 0, vis, n, m);
+                dfs(board, i, 0, vis, n, m);
             if(board[i][m-1] == 'O' && !vis[i][m-1])
-                bfs(board, i, m-1, vis, n, m);
+                dfs(board, i, m-1, vis, n, m);
         }
 
         for(int j=0;j<m;j++) {
             if(board[0][j] == 'O' && !vis[0][j])
-                bfs(board, 0, j, vis, n, m);
+                dfs(board, 0, j, vis, n, m);
             if(board[n-1][j] == 'O' && !vis[n-1][j])
-                bfs(board, n-1, j, vis, n, m);
+                dfs(board, n-1, j, vis, n, m);
         }
 
         for(int i=0;i<n;i++) {
