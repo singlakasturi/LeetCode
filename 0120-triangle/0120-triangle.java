@@ -1,30 +1,24 @@
 class Solution {
-    public List<List<Integer>> dp;
 
-    public int solve(int i, int j, List<List<Integer>> trianlge, int n) {
-        if(i == n-1)
-            return trianlge.get(i).get(j);
+    Integer[][] dp;
 
-        if(j > i || i >= n)
-            return Integer.MAX_VALUE;
+    int solve(int i, int j, List<List<Integer>> triangle) {
+        if (i == triangle.size() - 1)
+            return triangle.get(i).get(j);
 
-        if(dp.get(i).get(j) != -1)
-            return dp.get(i).get(j);
+        if (dp[i][j] != null)
+            return dp[i][j];
 
-        int d = trianlge.get(i).get(j) + solve(i+1, j, trianlge, n);
-        int dg = trianlge.get(i).get(j) + solve(i+1, j+1, trianlge, n);
-
-        dp.get(i).set(j, Math.min(d, dg));
-        return dp.get(i).get(j);
+        return dp[i][j] = triangle.get(i).get(j)
+                + Math.min(solve(i + 1, j, triangle),
+                           solve(i + 1, j + 1, triangle));
     }
 
     public int minimumTotal(List<List<Integer>> triangle) {
         int n = triangle.size();
-        dp = new ArrayList<>();
 
-        for(int i=1;i<=n;i++)
-            dp.add(new ArrayList<>(Collections.nCopies(i, -1)));
+        dp = new Integer[n][n];
 
-        return solve(0, 0, triangle, n);    
+        return solve(0, 0, triangle);
     }
 }
