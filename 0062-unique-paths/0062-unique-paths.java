@@ -1,6 +1,6 @@
 class Solution {
 
-    int[][] dp;
+    int[] dp;
 
     // public int solve(int i, int j, int n, int m) {
     //     if(i >= n || j >= m)
@@ -20,14 +20,15 @@ class Solution {
     // }
 
     public int uniquePaths(int n, int m) {
-        dp = new int[n][m];
-        Arrays.fill(dp[0], 1);
-        for(int i=0;i<n;i++)
-            dp[i][0] = 1;
+        dp = new int[m];
+        Arrays.fill(dp, 1);
 
         for(int i=1;i<n;i++) {
+            
+            int[] temp = dp.clone();
+
             for(int j=1;j<m;j++) {
-                dp[i][j] = dp[i-1][j] + dp[i][j-1];
+                dp[j] = temp[j] + dp[j-1];
             }
         }
 
@@ -41,6 +42,6 @@ class Solution {
         //     }
         // }
 
-        return dp[n-1][m-1];
+        return dp[m-1];
     }
 }
