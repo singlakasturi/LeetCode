@@ -2,38 +2,45 @@ class Solution {
 
     int[] dp;
 
-    public int solve(int amount, int[] coins) {
+    // public int solve(int amount, int[] coins) {
 
-        if(amount == 0)
-            return 0;
+    //     if(amount == 0)
+    //         return 0;
 
-        if(amount < 0)
-            return Integer.MAX_VALUE;
+    //     if(amount < 0)
+    //         return Integer.MAX_VALUE;
 
-        if(dp[amount] != -1)
-            return dp[amount];
+    //     if(dp[amount] != -1)
+    //         return dp[amount];
 
-        int ans = Integer.MAX_VALUE;
+    //     int ans = Integer.MAX_VALUE;
 
-        for(int coin : coins) {
-            int rem = solve(amount - coin, coins);
+    //     for(int coin : coins) {
+    //         int rem = solve(amount - coin, coins);
 
-            if(rem != Integer.MAX_VALUE)
-                ans = Math.min(ans, 1 + rem);
-        }
+    //         if(rem != Integer.MAX_VALUE)
+    //             ans = Math.min(ans, 1 + rem);
+    //     }
 
-        return dp[amount] = ans;
+    //     return dp[amount] = ans;
 
         
-    }
+    // }
 
     public int coinChange(int[] coins, int amount) {
         int n = coins.length;
         dp = new int[amount + 1];
+        Arrays.fill(dp, Integer.MAX_VALUE);
+        dp[0] = 0;
 
-        Arrays.fill(dp, -1);
+        for(int a = 1; a <= amount; a++) {
+            for(int coin : coins) {
+                if(coin <= a && dp[a - coin] != Integer.MAX_VALUE) {
+                    dp[a] = Math.min(dp[a], 1 + dp[a - coin]);
+                }
+            }
+        }
 
-        int ans = solve(amount, coins);
-        return ans != Integer.MAX_VALUE ? ans : -1;
+        return dp[amount] != Integer.MAX_VALUE ? dp[amount] : -1;
     }
 }
