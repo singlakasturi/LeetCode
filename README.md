@@ -296,6 +296,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0570-managers-with-at-least-5-direct-reports](https://github.com/singlakasturi/LeetCode/tree/master/0570-managers-with-at-least-5-direct-reports) |
 | [0577-employee-bonus](https://github.com/singlakasturi/LeetCode/tree/master/0577-employee-bonus) |
 | [0596-classes-with-at-least-5-students](https://github.com/singlakasturi/LeetCode/tree/master/0596-classes-with-at-least-5-students) |
+| [0619-biggest-single-number](https://github.com/singlakasturi/LeetCode/tree/master/0619-biggest-single-number) |
 | [1070-product-sales-analysis-iii](https://github.com/singlakasturi/LeetCode/tree/master/1070-product-sales-analysis-iii) |
 | [1148-article-views-i](https://github.com/singlakasturi/LeetCode/tree/master/1148-article-views-i) |
 | [1193-monthly-transactions-i](https://github.com/singlakasturi/LeetCode/tree/master/1193-monthly-transactions-i) |
