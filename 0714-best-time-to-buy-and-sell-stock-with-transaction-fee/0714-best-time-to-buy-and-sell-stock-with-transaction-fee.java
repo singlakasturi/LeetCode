@@ -1,29 +1,21 @@
 class Solution {
 
-    int[][] dp;
-
-    public int solve(int i, int[] prices, int fee, int canBuy, int n) {
-        if(i >= n)
-            return 0;
-
-        if(dp[i][canBuy] != -1)
-            return dp[i][canBuy];
-
-        if(canBuy == 1)
-            dp[i][canBuy] = Math.max(solve(i+1, prices, fee, 1, n), solve(i+1, prices, fee, 0, n) - prices[i]);
-        else
-            dp[i][canBuy] = Math.max(solve(i+1, prices, fee, 0, n), solve(i+1, prices, fee, 1, n) + prices[i] - fee);
-
-        return dp[i][canBuy];
-    }
 
     public int maxProfit(int[] prices, int fee) {
         int n = prices.length;
-        dp = new int[n][2];
+        int[] behind = new int[2];
+        int[] curr = new int[2];
 
-        for(int[] i : dp)
-            Arrays.fill(i, -1);
+        behind[0] = 0;
+        behind[1] = -prices[0];
 
-        return solve(0, prices, fee, 1, n);
+        for(int i=1;i<=n;i++) {
+            curr[1] = Math.max(behind[1], behind[0] - prices[i-1]);
+            curr[0] = Math.max(behind[0], behind[1] + prices[i - 1] - fee);
+
+            behind = curr;
+        }
+
+        return curr[0];
     }
 }
