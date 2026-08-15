@@ -133,6 +133,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sorting
 |  |
 | ------- |
+| [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/singlakasturi/LeetCode/tree/master/0452-minimum-number-of-arrows-to-burst-balloons) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/singlakasturi/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
 ## String
 |  |
@@ -169,6 +170,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0309-best-time-to-buy-and-sell-stock-with-cooldown](https://github.com/singlakasturi/LeetCode/tree/master/0309-best-time-to-buy-and-sell-stock-with-cooldown) |
 | [0322-coin-change](https://github.com/singlakasturi/LeetCode/tree/master/0322-coin-change) |
 | [0416-partition-equal-subset-sum](https://github.com/singlakasturi/LeetCode/tree/master/0416-partition-equal-subset-sum) |
+| [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/singlakasturi/LeetCode/tree/master/0452-minimum-number-of-arrows-to-burst-balloons) |
 | [0494-target-sum](https://github.com/singlakasturi/LeetCode/tree/master/0494-target-sum) |
 | [0542-01-matrix](https://github.com/singlakasturi/LeetCode/tree/master/0542-01-matrix) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/singlakasturi/LeetCode/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
@@ -350,6 +352,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/singlakasturi/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
+| [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/singlakasturi/LeetCode/tree/master/0452-minimum-number-of-arrows-to-burst-balloons) |
 | [0714-best-time-to-buy-and-sell-stock-with-transaction-fee](https://github.com/singlakasturi/LeetCode/tree/master/0714-best-time-to-buy-and-sell-stock-with-transaction-fee) |
 ## Recursion
 |  |
