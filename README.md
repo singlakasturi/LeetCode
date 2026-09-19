@@ -98,6 +98,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/singlakasturi/LeetCode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/singlakasturi/LeetCode/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
+| [0169-majority-element](https://github.com/singlakasturi/LeetCode/tree/master/0169-majority-element) |
 | [0290-word-pattern](https://github.com/singlakasturi/LeetCode/tree/master/0290-word-pattern) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/singlakasturi/LeetCode/tree/master/0653-two-sum-iv-input-is-a-bst) |
 | [0863-all-nodes-distance-k-in-binary-tree](https://github.com/singlakasturi/LeetCode/tree/master/0863-all-nodes-distance-k-in-binary-tree) |
@@ -138,6 +139,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Sorting
 |  |
 | ------- |
+| [0169-majority-element](https://github.com/singlakasturi/LeetCode/tree/master/0169-majority-element) |
 | [0452-minimum-number-of-arrows-to-burst-balloons](https://github.com/singlakasturi/LeetCode/tree/master/0452-minimum-number-of-arrows-to-burst-balloons) |
 | [0502-ipo](https://github.com/singlakasturi/LeetCode/tree/master/0502-ipo) |
 | [0987-vertical-order-traversal-of-a-binary-tree](https://github.com/singlakasturi/LeetCode/tree/master/0987-vertical-order-traversal-of-a-binary-tree) |
@@ -172,6 +174,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0121-best-time-to-buy-and-sell-stock](https://github.com/singlakasturi/LeetCode/tree/master/0121-best-time-to-buy-and-sell-stock) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/singlakasturi/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0130-surrounded-regions](https://github.com/singlakasturi/LeetCode/tree/master/0130-surrounded-regions) |
+| [0169-majority-element](https://github.com/singlakasturi/LeetCode/tree/master/0169-majority-element) |
 | [0188-best-time-to-buy-and-sell-stock-iv](https://github.com/singlakasturi/LeetCode/tree/master/0188-best-time-to-buy-and-sell-stock-iv) |
 | [0198-house-robber](https://github.com/singlakasturi/LeetCode/tree/master/0198-house-robber) |
 | [0200-number-of-islands](https://github.com/singlakasturi/LeetCode/tree/master/0200-number-of-islands) |
@@ -206,6 +209,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/singlakasturi/LeetCode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/singlakasturi/LeetCode/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0108-convert-sorted-array-to-binary-search-tree](https://github.com/singlakasturi/LeetCode/tree/master/0108-convert-sorted-array-to-binary-search-tree) |
+| [0169-majority-element](https://github.com/singlakasturi/LeetCode/tree/master/0169-majority-element) |
 ## Design
 |  |
 | ------- |
@@ -374,4 +378,12 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0002-add-two-numbers](https://github.com/singlakasturi/LeetCode/tree/master/0002-add-two-numbers) |
+## Counting
+|  |
+| ------- |
+| [0169-majority-element](https://github.com/singlakasturi/LeetCode/tree/master/0169-majority-element) |
+## Boyer–Moore Majority Vote Algorithm
+|  |
+| ------- |
+| [0169-majority-element](https://github.com/singlakasturi/LeetCode/tree/master/0169-majority-element) |
 <!---LeetCode Topics End-->
