@@ -6,12 +6,12 @@ class Solution {
             return false;
 
         HashMap<Character, String> mappy = new HashMap<>();
-
+        
         for(int i=0;i<n;i++) {
             char c = pattern.charAt(i);
             String word = words[i];
 
-            if(mappy.containsKey(c)) {
+            if(mappy.containsKey(c)){
                 if(!mappy.get(c).equals(word))
                     return false;
             }
