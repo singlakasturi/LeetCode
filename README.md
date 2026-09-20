@@ -99,6 +99,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/singlakasturi/LeetCode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0106-construct-binary-tree-from-inorder-and-postorder-traversal](https://github.com/singlakasturi/LeetCode/tree/master/0106-construct-binary-tree-from-inorder-and-postorder-traversal) |
 | [0169-majority-element](https://github.com/singlakasturi/LeetCode/tree/master/0169-majority-element) |
+| [0205-isomorphic-strings](https://github.com/singlakasturi/LeetCode/tree/master/0205-isomorphic-strings) |
 | [0290-word-pattern](https://github.com/singlakasturi/LeetCode/tree/master/0290-word-pattern) |
 | [0383-ransom-note](https://github.com/singlakasturi/LeetCode/tree/master/0383-ransom-note) |
 | [0653-two-sum-iv-input-is-a-bst](https://github.com/singlakasturi/LeetCode/tree/master/0653-two-sum-iv-input-is-a-bst) |
@@ -150,6 +151,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | [0006-zigzag-conversion](https://github.com/singlakasturi/LeetCode/tree/master/0006-zigzag-conversion) |
 | [0072-edit-distance](https://github.com/singlakasturi/LeetCode/tree/master/0072-edit-distance) |
 | [0115-distinct-subsequences](https://github.com/singlakasturi/LeetCode/tree/master/0115-distinct-subsequences) |
+| [0205-isomorphic-strings](https://github.com/singlakasturi/LeetCode/tree/master/0205-isomorphic-strings) |
 | [0257-binary-tree-paths](https://github.com/singlakasturi/LeetCode/tree/master/0257-binary-tree-paths) |
 | [0290-word-pattern](https://github.com/singlakasturi/LeetCode/tree/master/0290-word-pattern) |
 | [0297-serialize-and-deserialize-binary-tree](https://github.com/singlakasturi/LeetCode/tree/master/0297-serialize-and-deserialize-binary-tree) |
